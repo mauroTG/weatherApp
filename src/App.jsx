@@ -35,7 +35,7 @@ const App = () => {
   return (
     <div className="container mx-auto">
       <div
-        className="bg-gradient-to-r from-orange-400 to-rose-400 w-11/12 max-w-[480px] text-white my-12 mx-auto rounded-3xl py-10 px-9 text-center shadow-2xl transition duration-300"
+        className="bg-gradient-to-r from-orange-400 to-rose-400 w-2/3 max-w-[480px] text-white my-12 mx-auto rounded-3xl py-10 px-9 text-center shadow-2xl transition duration-300"
         id="background">
         <div className="w-full flex items-center justify-between gap-4">
           <input
@@ -45,12 +45,12 @@ const App = () => {
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             onKeyDownCapture={searchLocation}
-            className="border-none outline-none bg-zinc-200 text-zinc-800 py-2 px-6 h-10 rounded-3xl flex-1 text-lg"
+            className="border-none outline-none bg-zinc-200 text-zinc-800 py-2 px-6 h-10 rounded-3xl flex-1 text-lg w-3/4"
           />
           <button
-            className="border-none outline-none bg-zinc-200 rounded-full h-10 w-10 cursor-pointer relative"
+            className="border-none max-w-10  w-1/4 outline-none bg-zinc-200 rounded-full h-10 cursor-pointer relative"
             onClick={searchLocation}>
-            <MagnifyingGlassIcon className="absolute w-5 text-zinc-800 top-1/4 left-1/4" />
+            <MagnifyingGlassIcon className="absolute max-w-5 text-zinc-800 top-1/4 left-1/4" />
           </button>
         </div>
 
@@ -63,7 +63,7 @@ const App = () => {
             <h1 className="text-5xl font-bold mt-5">
               {Math.round(data.main.temp * 10) / 10}°C
             </h1>
-            <div className="flex items-center justify-between py-0 px-5 mt-5">
+            <div className="flex flex-row gap-y-2 max-[480px]:flex-col items-center justify-between py-0 px-5 mt-5">
               <div className="flex items-center text-left gap-4">
                 <img src={Humidity} alt="Humidity icon" className="w-10 mr-2" />
                 <div>
